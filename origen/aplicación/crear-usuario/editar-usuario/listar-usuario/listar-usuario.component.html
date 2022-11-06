@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header">
+        Usuarios
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of Usuarios; let iControl=index">
+                        <td>{{usuario.id}}</td>
+                        <td>{{usuario.Nombre}}</td>
+                        <td>{{usuario.Correo}}</td>
+                        <td>
+                            <a routerLink="/editar-usuario/{{usuario.id}}">Editar</a>| 
+                            <a name="" id="" class="btn btn-danger" (click)="borrarRegistro(usuario.id,iControl)" role="button">Borrar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
